@@ -1,4 +1,4 @@
-﻿namespace Castorix
+﻿namespace Castorix.MAUI
 {
     public partial class MainPage : ContentPage
     {

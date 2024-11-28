@@ -1,6 +1,6 @@
 ﻿using Foundation;
 
-namespace Castorix
+namespace Castorix.MAUI
 {
     [Register("AppDelegate")]
     public class AppDelegate : MauiUIApplicationDelegate

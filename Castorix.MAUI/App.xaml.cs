@@ -1,4 +1,4 @@
-﻿namespace Castorix
+﻿namespace Castorix.MAUI
 {
     public partial class App : Application
     {
@@ -9,7 +9,7 @@
 
         protected override Window CreateWindow(IActivationState? activationState)
         {
-            return new Window(new MainPage()) { Title = "Castorix" };
+            return new Window(new MainPage()) { Title = "Castorix.MAUI" };
         }
     }
 }

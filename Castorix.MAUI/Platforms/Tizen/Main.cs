@@ -2,7 +2,7 @@ using System;
 using Microsoft.Maui;
 using Microsoft.Maui.Hosting;
 
-namespace Castorix
+namespace Castorix.MAUI
 {
     internal class Program : MauiApplication
     {

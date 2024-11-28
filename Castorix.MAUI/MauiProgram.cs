@@ -1,6 +1,6 @@
 ﻿using Microsoft.Extensions.Logging;
 
-namespace Castorix
+namespace Castorix.MAUI
 {
     public static class MauiProgram
     {

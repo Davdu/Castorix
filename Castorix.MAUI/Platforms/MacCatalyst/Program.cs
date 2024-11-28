@@ -1,7 +1,7 @@
 ﻿using ObjCRuntime;
 using UIKit;
 
-namespace Castorix
+namespace Castorix.MAUI
 {
     public class Program
     {
