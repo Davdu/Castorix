@@ -23,9 +23,6 @@ jobs:
     - name: Restore dependencies
       run: dotnet restore Castorix.sln
 
-    - name: Restore .NET workloads
-      run: dotnet workload restore
-
     - name: Build solution
       run: dotnet build Castorix.sln --configuration Release
 
