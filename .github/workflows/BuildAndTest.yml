@@ -33,7 +33,7 @@ jobs:
         dotnet restore Castorix.sln
 
     - name: Build Solution
-      run: dotnet build Castorix.sln --configuration Release --framework net9.0-windows10.0.19041.0
+      run: dotnet build Castorix.sln --configuration Release --framework net9.0-windows
 
     - name: Run Tests (if applicable)
       run: dotnet test Castorix.sln
