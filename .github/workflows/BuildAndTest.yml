@@ -1,0 +1,25 @@
+name: .NET Build and Test
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v3
+    - name: Setup .NET
+      uses: actions/setup-dotnet@v3
+      with:
+        dotnet-version: '9.x'
+    - name: Install dependencies
+      run: dotnet restore Castorix.sln
+    - name: Build solution
+      run: dotnet build Castorix.sln --configuration Release
+    - name: Run tests (if applicable)
+      run: dotnet test Castorix.sln
