@@ -28,10 +28,9 @@ jobs:
       with:
         dotnet-version: '9.0.x'
 
-    - name: Restore Dependencies and Workloads
+    - name: Restore Dependencies
       run: |
         dotnet restore Castorix.sln
-        dotnet workload restore
 
     - name: Build Solution
       run: dotnet build Castorix.sln --configuration Release --framework net9.0-windows
