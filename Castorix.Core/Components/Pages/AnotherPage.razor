@@ -1,0 +1,32 @@
+﻿@page "/anotherpage"
+<h3>Welcome to Blazor Hybrid!</h3>
+
+<div class="dashboard">
+    <div class="grid">
+        <div>Div 1</div>
+        <div>Div 2</div>
+        <div>Div 3</div>
+        <div>Div 4</div>
+        <div>Div 5</div>
+        <div>Div 6</div>
+        <div>Div 7</div>
+        <div>Div 8</div>
+    </div>
+</div>
+
+<style>
+    .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill,
+                minmax(400px, 1fr));
+            grid-gap: 10px
+        }
+
+    .grid > div {
+        font-size: 20px;
+        padding: 1rem;
+        color: white;
+        text-align: center;
+        background: black;
+    }
+</style>
