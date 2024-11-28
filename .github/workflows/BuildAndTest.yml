@@ -11,7 +11,7 @@ on:
 
 jobs:
   build:
-    runs-on: ubuntu-latest
+    runs-on: windows-latest
     steps:
     - uses: actions/checkout@v3
 
@@ -20,15 +20,14 @@ jobs:
       with:
         dotnet-version: '9.0.x'
 
-    - name: Install .NET MAUI Android Workload
-      run: dotnet workload install maui-android
-
     - name: Restore dependencies
       run: dotnet restore Castorix.sln
+
+    - name: Restore .NET workloads
+      run: dotnet workload restore
 
     - name: Build solution
       run: dotnet build Castorix.sln --configuration Release
 
     - name: Run tests (if applicable)
       run: dotnet test Castorix.sln
-
