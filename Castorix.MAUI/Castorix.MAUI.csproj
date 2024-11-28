@@ -36,6 +36,12 @@
         <MauiAsset Include="Resources\Raw\**" LogicalName="%(RecursiveDir)%(Filename)%(Extension)" />
     </ItemGroup>
 
+    <ItemGroup>
+        <None Include="..\Castorix.Core\wwwroot\**\*">
+            <Link>wwwroot\%(RecursiveDir)%(Filename)%(Extension)</Link>
+        </None>
+    </ItemGroup>
+
     <Target Name="CopyWwwroot" AfterTargets="Build">
         <Copy SourceFiles="@(None->'%(FullPath)')" DestinationFolder="$(OutputPath)wwwroot\%(RecursiveDir)" SkipUnchangedFiles="true" />
     </Target>
