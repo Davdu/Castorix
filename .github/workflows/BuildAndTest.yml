@@ -1,3 +1,4 @@
+
 name: .NET Build and Test
 
 on:
@@ -13,13 +14,21 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v3
+
     - name: Setup .NET
       uses: actions/setup-dotnet@v3
       with:
-        dotnet-version: '9.x'
-    - name: Install dependencies
+        dotnet-version: '9.0.x'
+
+    - name: Restore dependencies
       run: dotnet restore Castorix.sln
+
+    - name: Install .NET workloads
+      run: dotnet workload restore
+
     - name: Build solution
       run: dotnet build Castorix.sln --configuration Release
+
     - name: Run tests (if applicable)
       run: dotnet test Castorix.sln
+
